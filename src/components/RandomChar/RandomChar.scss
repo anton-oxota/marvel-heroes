@@ -1,0 +1,127 @@
+.random-char {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 250px);
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__info {
+        padding: 35px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__img {
+        width: 180px;
+        height: 180px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        color: #000;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__links {
+        margin-top: auto;
+        display: flex;
+        gap: 30px;
+    }
+
+
+    &__try {
+        padding: 35px;
+        background-color: #232222;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__try-text {
+        color: var(--white-color);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__try-text+&__try-text {
+        margin-top: 33px;
+    }
+
+    &__try-button {
+        margin-top: auto;
+    }
+
+    &__loading {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .random-char {
+        &__img {
+            width: 140px;
+            height: 140px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .random-char {
+
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 250px);
+        }
+
+        &__img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .random-char {
+        &__wrapper {
+            grid-template-rows: 400px 300px;
+        }
+
+        &__info {
+            flex-direction: column;
+        }
+
+        &__img {
+            width: 130px;
+            height: 130px;
+        }
+
+        &__content {
+            height: 100%;
+        }
+    }
+}

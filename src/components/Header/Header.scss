@@ -1,0 +1,44 @@
+.header {
+    padding: 50px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__pages {
+        display: flex;
+        align-items: center;
+
+        color: var(--black-color);
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__page-link {
+        text-decoration: none;
+    }
+
+    .divider {
+        padding: 8px;
+    }
+}
+
+@media (max-width:576px) {
+    .header {
+        padding: 25px 0;
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__pages {
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.char-content {
+    padding-top: 50px;
+    padding-bottom: 45px;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__aside {
+        position: sticky;
+        top: 50px;
+        margin-left: auto;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .char-content {
+        &__aside {
+            display: none;
+        }
+    }
+}

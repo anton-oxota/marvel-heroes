@@ -1,0 +1,89 @@
+@import 'reset.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Roboto Condensed";
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+:root {
+    --main-color: #9F0013;
+    --black-color: #000000;
+    --white-color: #FFF;
+    --button-grey-color: #5C5C5C;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 11px 18px;
+    min-width: 101px;
+
+    color: var(--white-color);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: var(--button-grey-color);
+    border: unset;
+
+    cursor: pointer;
+
+    &--red {
+        background-color: var(--main-color);
+    }
+
+    &:disabled {
+        filter: grayscale(1)
+    }
+}
+
+.error-message {
+    color: var(--black-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    span {
+        color: var(--main-color)
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        padding: 0 10px;
+        width: 100%;
+    }
+}

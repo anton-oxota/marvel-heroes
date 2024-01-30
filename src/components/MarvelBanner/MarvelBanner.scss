@@ -1,0 +1,57 @@
+.marvel-banner {
+    &__wrapper {
+        padding: 0 25px 0 45px;
+        width: 100%;
+        height: 100px;
+
+        display: flex;
+        background: #232222;
+        align-items: center;
+    }
+
+    &__text {
+        color: var(--white-color);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        margin-left: 83px;
+    }
+
+    img {
+        height: 100%;
+    }
+
+    &__img {
+        margin-left: 45px;
+    }
+
+    &__logo-img {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .marvel-banner {
+        &__img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .marvel-banner {
+        &__text {
+            margin-left: unset;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .marvel-banner {
+        &__logo-img {
+            display: none;
+        }
+    }
+}

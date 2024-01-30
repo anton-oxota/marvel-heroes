@@ -1,0 +1,35 @@
+.comic-list {
+
+    padding: 50px 0;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-auto-rows: auto;
+        gap: 55px 67px;
+
+        position: relative;
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 65px;
+    }
+
+    &__loading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .comic-list {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            justify-items: center;
+            gap: 55px 15px;
+        }
+    }
+}
